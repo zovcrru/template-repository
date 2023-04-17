@@ -276,14 +276,14 @@ tests = ["check-manifest (>=0.42)", "mock (>=1.3.0)", "pytest (==5.4.3)", "pytes
 
 [[package]]
 name = "doc8"
-version = "1.0.0"
+version = "1.1.1"
 description = "Style checker for Sphinx (or other) RST documentation"
 category = "dev"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "doc8-1.0.0-py3-none-any.whl", hash = "sha256:0c6c3104fa7f7bb2103589c0a8e272c105fdff3ddd1ef4808e51b2782185e9ab"},
-    {file = "doc8-1.0.0.tar.gz", hash = "sha256:1e999a14fe415ea96d89d5053c790d01061f19b6737706b817d1579c2a07cc16"},
+    {file = "doc8-1.1.1-py3-none-any.whl", hash = "sha256:e493aa3f36820197c49f407583521bb76a0fde4fffbcd0e092be946ff95931ac"},
+    {file = "doc8-1.1.1.tar.gz", hash = "sha256:d97a93e8f5a2efc4713a0804657dedad83745cca4cd1d88de9186f77f9776004"},
 ]
 
 [package.dependencies]
@@ -1934,4 +1934,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "e726176986a165a963576ed89b7d56f7067e6df76e21c539397e323e45bb6680"
+content-hash = "b49b4a206cd7c4881e959a18d6684020b76fab5d9569aabf3fab003bfadf8d5e"
