@@ -7,7 +7,7 @@ on:
   pull_request:
   workflow_dispatch:
 
-concurrency: 
+concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
@@ -45,8 +45,12 @@ jobs:
     - name: Run checks
       run: make test
 
-    # Upload coverage to codecov: https://codecov.io/
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
+
+    - uses: reviewdog/action-setup@v1
       with:
-        file: ./coverage.xml
+        reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
+    # Upload coverage to codecov: https://codecov.io/
+   #- name: Upload coverage to Codecov
+     #uses: codecov/codecov-action@v3
+     #with:
+       #file: ./coverage.xml
