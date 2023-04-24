@@ -40,7 +40,7 @@ pytest-randomly = "^3.12"
 optional = true
 
 [tool.poetry.group.docs.dependencies]
-sphinx = "^6.1"
+sphinx = "^6.2"
 sphinx-autodoc-typehints = "^1.23"
 m2r2 = "^0.3"
 tomli = "^2.0"
