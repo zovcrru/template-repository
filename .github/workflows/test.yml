@@ -51,6 +51,7 @@ jobs:
     - uses: reviewdog/action-setup@v1
       with:
         reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
+    - run: reviewdog -version
       #Upload coverage to codecov: https://codecov.io/
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
