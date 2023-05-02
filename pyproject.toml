@@ -5,11 +5,8 @@ version = "0.1.0"
 license = "MIT"
 
 authors = ["Zov"]
-
 readme = "README.md"
-
 repository = "https://github.com/zovcrru/xls-db"
-
 keywords = []
 
 classifiers = [
