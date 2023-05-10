@@ -5,27 +5,17 @@ on:
     branches: [ $default-branch ]
   pull_request:
 #    branches: [ $default-branch ]
-  workflow_dispatch:
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
-  cancel-in-progress: true
-
-permissions:
-  contents: read
+  workflow_dispatch: [ $default-branch ]
 
 
 jobs:
   build:
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-20.04
     strategy:
+      fail-fast: false
       matrix:
-        include:
-          - os: ubuntu-20.04
-         #- os: windows-latest
-
-    python-version: ['3.8.9']
+        python-version: ['3.8.9']
 
     steps:
     - uses: actions/checkout@v3
