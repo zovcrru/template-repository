@@ -1,11 +1,11 @@
 # xls-db
 
 [![Build Status](https://github.com/zovcrru/xls-db/workflows/test/badge.svg?branch=master&event=push)](https://github.com/zovcrru/xls-db/actions?query=workflow%3Atest)
-[![codecov](https://codecov.io/gh/zovcrru/xls-db/branch/master/graph/badge.svg)](https://codecov.io/gh/zovcrru/xls-db)
+[![codecov](https://codecov.io/gh/zovcrru/template-repository/branch/master/graph/badge.svg?token=2I4FV72FOC)](https://codecov.io/gh/zovcrru/template-repository)
 [![Python Version](https://img.shields.io/pypi/pyversions/xls-db.svg)](https://pypi.org/project/xls-db/)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
-Load an excel file into the database
+Template repository
 
 
 ## Features

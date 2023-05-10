@@ -18,6 +18,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
+detect-secrets = "^1.4.0"
 
 [tool.poetry.group.test.dependencies]
 mypy = "^1.2"

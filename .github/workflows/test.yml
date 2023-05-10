@@ -16,7 +16,12 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-20.04
+         #- os: windows-latest
     strategy:
       matrix:
         python-version: ['3.8']
@@ -45,15 +50,13 @@ jobs:
     - name: Run checks
       run: make test
 
-#    - name: Upload coverage reports to Codecov
-#      uses: codecov/codecov-action@v3
-
     - uses: reviewdog/action-setup@v1
       with:
         reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
     - run: reviewdog -version
       #Upload coverage to codecov: https://codecov.io/
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      with:
-        file: ./coverage.xml
+
+     - name: Upload coverage to Codecov
+       uses: codecov/codecov-action@v3
+       with:
+         file: ./coverage.xml
