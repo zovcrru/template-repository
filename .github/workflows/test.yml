@@ -2,9 +2,9 @@ name: test
 
 on:
   push:
-    branches:
-      - master
+    branches: [ $default-branch ]
   pull_request:
+#    branches: [ $default-branch ]
   workflow_dispatch:
 
 concurrency:
@@ -13,6 +13,7 @@ concurrency:
 
 permissions:
   contents: read
+
 
 jobs:
   build:

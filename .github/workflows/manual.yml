@@ -6,17 +6,6 @@ name: Manual workflow
 # or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
-    inputs:
-      name:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
-        # Default value if no value is explicitly provided
-        default: 'World'
-        # Input has to be provided for the workflow to run
-        required: true
-        # The data type of the input
-        type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,8 +14,37 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install poetry
+      run: |
+        curl -sSL \
+          "https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py" | python
+
+        # Adding `poetry` to `$PATH`:
+        echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+
+    - name: Install dependencies
+      run: |
+        poetry config virtualenvs.in-project true
+        poetry run pip install -U pip
+        poetry install
+
+    - name: Run checks
+      run: make test
+
+    - uses: reviewdog/action-setup@v1
+      with:
+        reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
+    - run: reviewdog -version
+
+    # Upload coverage to codecov: https://codecov.io/
+     - name: Upload coverage to Codecov
+       uses: codecov/codecov-action@v3
+       with:
+         file: ./coverage.xml
