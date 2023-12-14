@@ -49,7 +49,7 @@ jobs:
       with:
         file: ./coverage.xml
 
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     # Standard drop-in approach that should work for most people.
     - uses: ammaraskar/sphinx-action@master
       with:
