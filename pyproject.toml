@@ -28,7 +28,7 @@ flake8-pytest-style = "^1.7"
 doc8 = "^1.1"
 nitpick = "^0.35"
 
-safety = "^3.0.0"
+safety = "^3.0.1"
 
 pytest = "^7.4"
 pytest-cov = "^4.1"
