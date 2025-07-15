@@ -24,7 +24,7 @@ detect-secrets = "^1.5.0"
 pyinstaller = "^6.13.0"
 
 [tool.poetry.group.test.dependencies]
-mypy = "^1.15"
+mypy = "^1.17"
 
 wemake-python-styleguide = "^1.1"
 flake8-pytest-style = "^2.0"
