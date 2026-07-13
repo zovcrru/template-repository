@@ -1409,27 +1409,27 @@ files = [
 
 [[package]]
 name = "nitpick"
-version = "0.35.0"
+version = "0.38.1"
 description = "Enforce the same settings across multiple language-independent projects"
 optional = false
-python-versions = ">=3.8,<4.0"
+python-versions = ">=3.10"
 groups = ["test"]
 files = [
-    {file = "nitpick-0.35.0-py3-none-any.whl", hash = "sha256:9911d32c2d488b41914aa1a6d230531fa92bbe3d6610e4a468a5cb5e30fab907"},
-    {file = "nitpick-0.35.0.tar.gz", hash = "sha256:098167a4c65655aca52c0ea3876b1e71cf634a27d0e17b971bce9bfcc1f3febe"},
+    {file = "nitpick-0.38.1-py3-none-any.whl", hash = "sha256:048503d4d8d2494983182b92ac34d9053aa6bdbb6c827409bb62e40fd3c637e6"},
+    {file = "nitpick-0.38.1.tar.gz", hash = "sha256:a31b2a1f5b526f59eaded4a3fb03c69150d1692846816754516404c86269606c"},
 ]
 
 [package.dependencies]
 attrs = ">=20.1.0"
 autorepr = "*"
 click = "*"
-ConfigUpdater = "*"
+configupdater = "*"
 dictdiffer = "*"
 dpath = "*"
 flake8 = ">=3.0.0"
 flatten-dict = "*"
 furl = "*"
-gitignore_parser = "*"
+gitignore-parser = "*"
 identify = "*"
 jmespath = "*"
 loguru = "*"
@@ -1438,19 +1438,16 @@ marshmallow-polyfield = ">=5.10,<6.0"
 more-itertools = "*"
 packaging = "*"
 pluggy = "*"
+pytest-socket = "*"
 python-slugify = "*"
 requests = "*"
 requests-cache = ">=1.0.0"
-"ruamel.yaml" = "*"
+ruamel-yaml = "*"
+ruamel-yaml-clib = ">=0.2.12"
 sortedcontainers = "*"
-StrEnum = "*"
+strenum = "*"
 toml = "*"
 tomlkit = ">=0.8.0"
-
-[package.extras]
-doc = ["sphinx", "sphinx-gitref", "sphinx_rtd_theme", "sphobjinv"]
-lint = ["pylint"]
-test = ["freezegun", "pytest", "pytest-cov", "pytest-datadir", "pytest-socket", "pytest-testmon", "pytest-watch", "responses", "testfixtures"]
 
 [[package]]
 name = "nltk"
@@ -1864,6 +1861,21 @@ files = [
 pytest = "*"
 
 [[package]]
+name = "pytest-socket"
+version = "0.8.0"
+description = "Pytest Plugin to disable socket calls during tests"
+optional = false
+python-versions = ">=3.10"
+groups = ["test"]
+files = [
+    {file = "pytest_socket-0.8.0-py3-none-any.whl", hash = "sha256:81821ba59f07d7600fe2b551d8714f40b068bd46e8b6704c48664e9d60cdacb8"},
+    {file = "pytest_socket-0.8.0.tar.gz", hash = "sha256:af9bb5f487da72be63573a6194cfac033b6c7a1c1561e150521105970f9e99f2"},
+]
+
+[package.dependencies]
+pytest = ">=7.0.0"
+
+[[package]]
 name = "python-slugify"
 version = "8.0.4"
 description = "A Python slugify application that also handles Unicode"
@@ -2211,7 +2223,6 @@ description = "C version of reader, parser and emitter for ruamel.yaml derived f
 optional = false
 python-versions = ">=3.9"
 groups = ["test"]
-markers = "platform_python_implementation == \"CPython\""
 files = [
     {file = "ruamel.yaml.clib-0.2.12-cp310-cp310-macosx_13_0_arm64.whl", hash = "sha256:11f891336688faf5156a36293a9c362bdc7c88f03a8a027c2c1d8e0bcde998e5"},
     {file = "ruamel.yaml.clib-0.2.12-cp310-cp310-manylinux2014_aarch64.whl", hash = "sha256:a606ef75a60ecf3d924613892cc603b154178ee25abb3055db5062da811fd969"},
@@ -2827,4 +2838,4 @@ dev = ["black (>=19.3b0) ; python_version >= \"3.6\"", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "3.12"
-content-hash = "b049af0d50128fc4f428e35543580a0cee96c004e0b9ede8aaf3474c08c9f40b"
+content-hash = "99ec918dec4f5836115a6ecb59e9a039d6cb14961c4c2181db03226ece509290"
