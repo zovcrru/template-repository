@@ -1305,7 +1305,7 @@ version = "3.3.3"
 description = "A sane and fast Markdown parser with useful plugins and renderers"
 optional = false
 python-versions = ">=3.8"
-groups = ["dev", "docs"]
+groups = ["docs"]
 files = [
     {file = "mistune-3.3.3-py3-none-any.whl", hash = "sha256:99de1585e42dcbd826faa9e11a202727a5e202e4e4722a4c69ac1ff615793dd7"},
     {file = "mistune-3.3.3.tar.gz", hash = "sha256:c4c6c0c840b8637a2e9b8b6d607eb7c8f00888bf14c754409bcd339e848c2477"},
@@ -2795,14 +2795,14 @@ zstd = ["backports-zstd (>=1.0.0) ; python_version < \"3.14\""]
 
 [[package]]
 name = "wemake-python-styleguide"
-version = "1.8.0"
+version = "1.8.1"
 description = "The strictest and most opinionated python linter ever"
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["test"]
 files = [
-    {file = "wemake_python_styleguide-1.8.0-py3-none-any.whl", hash = "sha256:9e9319f348170ec97bb7d6c5ab9455b2eabdf66974963a747a70d4d3c281566c"},
-    {file = "wemake_python_styleguide-1.8.0.tar.gz", hash = "sha256:fa71e7e202d1d913eedc36290160c196bdf815ab5694d202a181be3d1a9dcf9e"},
+    {file = "wemake_python_styleguide-1.8.1-py3-none-any.whl", hash = "sha256:811355a393536583236fa25409dc639809c1bd209f66dab012eb15e9f589784e"},
+    {file = "wemake_python_styleguide-1.8.1.tar.gz", hash = "sha256:a217caaf1cffe2d1168b13c405a204e82fe6c1bfc9f7d0b125dd4ce16624bc5f"},
 ]
 
 [package.dependencies]
